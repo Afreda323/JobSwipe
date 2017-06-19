@@ -1,7 +1,7 @@
 {
-  "name": "jobs",
-  "version": "0.0.0",
-  "description": "Hello Expo!",
+  "name": "JobSwipe",
+  "version": "0.6.9",
+  "description": "Job Search Application",
   "author": null,
   "private": true,
   "main": "main.js",
