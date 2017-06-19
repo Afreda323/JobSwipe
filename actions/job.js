@@ -28,7 +28,6 @@ export const fetchJobs = (region, search, radius, cb) => async dispatch => {
     let { data } = await axios.get(url);
     dispatch({ type: FETCH_JOBS, payload: data });
     cb();
-    console.log(data);
   } catch (error) {
     console.error(error);
   }
@@ -42,7 +41,7 @@ export const likeJob = job => {
 };
 
 export const clearJobs = () => {
-    return {
-        type: CLEAR_JOBS
-    }
-}
+  return {
+    type: CLEAR_JOBS
+  };
+};

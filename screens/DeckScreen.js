@@ -63,7 +63,27 @@ class DeckScreen extends Component {
       </Card>
     );
   }
-
+  renderLikesButton = () => {
+    if (this.props.likes.length > 0) {
+      return (
+        <View>
+          <Text style={{ textAlign: "center", marginBottom: 4 }}>or</Text>
+          <Button
+            title="View Your Likes"
+            onPress={() => this.props.navigation.navigate("review")}
+            icon={{
+              name: "ios-heart-outline",
+              type: "ionicon",
+              style: { fontSize: 30, color: "rgba(0,122,255,1)" }
+            }}
+            color="rgba(0,122,255,1)"
+            backgroundColor="white"
+            buttonStyle={{borderWidth: 2, borderColor: "rgba(0,122,255,1)"}}
+          />
+        </View>
+      );
+    }
+  };
   renderNoMoreCards = () => {
     return (
       <Card title="Nothing to see here">
@@ -77,6 +97,7 @@ class DeckScreen extends Component {
           }}
           backgroundColor="rgba(0,122,255,1)"
         />
+        {this.renderLikesButton()}
       </Card>
     );
   };
@@ -104,7 +125,10 @@ const styles = StyleSheet.create({
   }
 });
 
-function mapStateToProps({ job }) {
-  return { jobs: job.results };
+function mapStateToProps({ job, likes }) {
+  return {
+    jobs: job.results,
+    likes
+  };
 }
 export default connect(mapStateToProps, actions)(DeckScreen);

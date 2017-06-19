@@ -1,8 +1,8 @@
 import { FETCH_JOBS } from "../actions/types";
 
 const INITIAL_STATE = {
-    results: []
-}
+  results: []
+};
 
 export default function(state = INITIAL_STATE, action) {
   switch (action.type) {

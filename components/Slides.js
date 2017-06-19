@@ -12,7 +12,7 @@ class Slides extends Component {
           buttonStyle={styles.buttonStyle}
           title="Let's Do This!"
           iconRight
-          onPress={this.props.onComplete}         
+          onPress={this.props.onComplete}
         />
       );
     } else {
@@ -21,7 +21,7 @@ class Slides extends Component {
           style={{
             flexDirection: "row",
             marginTop: 15,
-            alignItems: 'center'
+            alignItems: "center"
           }}>
           <Text style={styles.swipe}>Swipe that way ➡</Text>
         </View>
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#03a9f4",
     marginTop: 20,
     borderWidth: 2,
-    borderColor: 'white'
+    borderColor: "white"
   },
   swipe: {
     color: "white",

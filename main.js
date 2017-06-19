@@ -49,7 +49,10 @@ class App extends React.Component {
         headerMode: "none",
         lazy: true,
         navigationOptions: {
-          tabBarVisible: false
+          tabBarVisible: false,
+        },
+        cardStyle: {
+          backgroundColor: '#fff'
         }
       }
     );

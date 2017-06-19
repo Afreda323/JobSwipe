@@ -69,7 +69,6 @@ class ReviewScreen extends Component {
         `https://api-ssl.bitly.com/v3/shorten?access_token=${BITLY}&longUrl=${url}`
       )
       .then(res => {
-        console.log(res.data.data);
         this.attemptShare(res.data.data.url, job, company);
       })
       .catch(error => {
@@ -109,7 +108,7 @@ class ReviewScreen extends Component {
               </View>
               <View style={styles.detailWrap}>
                 <Button
-                  title="Apply Now"
+                  title="Apply"
                   backgroundColor="rgba(0,122,255,1)"
                   onPress={() => Linking.openURL(url)}
                   icon={{
@@ -117,15 +116,26 @@ class ReviewScreen extends Component {
                     type: "ionicon",
                     style: { fontSize: 30 }
                   }}
+                  buttonStyle={{
+                      borderWidth: 2,
+                    borderColor: "rgba(0,122,255,1)",
+                    paddingHorizontal: 32
+                  }}
                 />
                 <Button
-                  title="Share Job"
-                  backgroundColor="rgba(0,122,255,1)"
+                  title="Share"
                   onPress={() => this.handleShare(url, jobtitle, company)}
                   icon={{
                     name: "md-share",
                     type: "ionicon",
-                    style: { fontSize: 30 }
+                    style: { fontSize: 30, color: "rgba(0,122,255,1)" }
+                  }}
+                  color="rgba(0,122,255,1)"
+                  backgroundColor="white"
+                  buttonStyle={{
+                    borderWidth: 2,
+                    borderColor: "rgba(0,122,255,1)",
+                    paddingHorizontal: 32
                   }}
                 />
               </View>
@@ -163,7 +173,7 @@ const styles = StyleSheet.create({
   detailWrap: {
     marginVertical: 5,
     flexDirection: "row",
-    justifyContent: "space-around"
+    justifyContent: "space-around",
   }
 });
 

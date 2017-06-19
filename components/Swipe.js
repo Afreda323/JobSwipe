@@ -94,7 +94,7 @@ class Deck extends Component {
     if (this.state.index >= this.props.data.length) {
       return this.props.renderNoMoreCards();
     }
-    
+
     const deck = this.props.data.map((item, i) => {
       if (i < this.state.index) {
         return null;
@@ -128,7 +128,7 @@ class Deck extends Component {
       return (
         <View style={styles.btnWrap}>
           <Button
-          large
+            large
             title="Nope"
             onPress={() => this.forceSwipe("left")}
             icon={{
@@ -139,7 +139,7 @@ class Deck extends Component {
             backgroundColor="rgba(255,59,48,1)"
           />
           <Button
-          large
+            large
             title="Yeah"
             buttonRight
             onPress={() => this.forceSwipe("right")}
@@ -155,7 +155,7 @@ class Deck extends Component {
     } else {
       return null;
     }
-  }
+  };
   render() {
     return (
       <View>

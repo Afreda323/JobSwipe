@@ -143,6 +143,8 @@ class MapScreen extends Component {
     return (
       <View style={{ flex: 1 }}>
         <MapView
+          loadingEnabled
+          loadingIndicatorColor="rgba(0,122,255,1)"
           style={{ flex: 1 }}
           region={this.state.region}
           onRegionChangeComplete={this.onRegionChangeComplete}>
@@ -207,7 +209,7 @@ class MapScreen extends Component {
                 borderColor: "rgba(0,122,255,1)"
               },
               container: {
-                paddingVertical: 7,
+                paddingVertical: 4,
                 paddingHorizontal: 15
               },
               listView: {
@@ -279,7 +281,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     flex: 1,
     marginHorizontal: 15,
-    marginBottom: 5,
+    marginBottom: 2,
     backgroundColor: "#fff",
     borderWidth: 1,
     borderColor: "rgba(0,122,255,1)",
@@ -287,13 +289,13 @@ const styles = StyleSheet.create({
   },
   geoContainer: {
     position: "absolute",
-    top: Platform.OS === "android" ? 34 : 10,
+    top: Constants.statusBarHeight,
     left: 0,
     right: 0
   },
   buttonContainer: {
     position: "absolute",
-    bottom: 20,
+    bottom: 4,
     left: 0,
     right: 0
   },
@@ -302,11 +304,11 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     marginHorizontal: 15,
-    marginTop: 5,
-    marginBottom: 10,
+    marginTop: 2,
+    marginBottom: 4,
     backgroundColor: "#fff",
     paddingHorizontal: 15,
-    paddingVertical: 5,
+    paddingVertical: 1,
     borderWidth: 1,
     borderColor: "rgba(0,122,255,1)"
   },

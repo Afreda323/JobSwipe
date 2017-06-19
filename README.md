@@ -9,7 +9,8 @@ As of right now, this app has not been thoroughly tested once on an iOS device. 
 ## Tech Stack as it stands:
 
 * React Native
-* Redux / Redux Thunk
+* Redux
+* Redux Thunk / Redux Persist
 * React Native Elements
 * Airbnb Mapview
 * Google Places
