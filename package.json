@@ -1,0 +1,23 @@
+{
+  "name": "jobs",
+  "version": "0.0.0",
+  "description": "Hello Expo!",
+  "author": null,
+  "private": true,
+  "main": "main.js",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "expo": "17.0.0",
+    "latlng-to-zip": "0.0.1",
+    "lodash": "^4.17.4",
+    "qs": "^6.4.0",
+    "react": "16.0.0-alpha.6",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-17.0.0.tar.gz",
+    "react-native-elements": "^0.12.2",
+    "react-native-google-places-autocomplete": "^1.2.12",
+    "react-navigation": "^1.0.0-beta.11",
+    "react-redux": "^5.0.5",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0"
+  }
+}
